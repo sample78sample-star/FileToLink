@@ -1,1 +1,22 @@
-
+services:
+  - type: web
+    name: filetolink
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: BIN_CHANNEL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: LOG_CHANNEL
+        sync: false
